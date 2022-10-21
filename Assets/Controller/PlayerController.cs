@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         
     }
-    void ToggleMenu()
+    public void ToggleMenu()
     {
         if (menuActive)
         {
@@ -51,7 +51,6 @@ public class PlayerController : MonoBehaviour
         rb.velocity = move*speed;
         if (playerControls.Ground.MenuToggle.triggered)
         {
-            print("hello");
             ToggleMenu();
         }
       
