@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b2d1941470deb6499f2440169828f22, type: 3}
-  m_Name: Torch
+  m_Name: PlayerSpawn
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5749746106018223246, guid: 862316543fe74904a84dc2ccce9ae13f, type: 3}
-  objectToRoomPercent: 0.015
-  genorateSetAmount: 0
-  genorateAmount: 0
+  prefab: {fileID: 1663984626712432043, guid: 923c385a27eb34743a309d3bdd91f712, type: 3}
+  objectToRoomPercent: 0
+  genorateSetAmount: 1
+  genorateAmount: 1
