@@ -36,6 +36,8 @@ public class RandomDungeonGenerator : AbstractRandomDungeonGenerator
             }
         }
 
+        interactibleObjectGenorator.GenorateDungeonObjects(dungeonTiles);
+
         dungeonTiles.UnionWith(RandomDungeonGenerationAlgorithm.GenorateWalls(dungeonTiles));
 
         if (genorateWithRandomColor)

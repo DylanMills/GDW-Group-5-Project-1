@@ -10,6 +10,9 @@ public abstract class AbstractRandomDungeonGenerator : MonoBehaviour
     protected TilemapBuilder builder = null;
 
     [SerializeField]
+    protected InteractibleObjectGenorator interactibleObjectGenorator = null;
+
+    [SerializeField]
     protected Vector2Int startPos;
 
     [SerializeField]
@@ -39,6 +42,7 @@ public abstract class AbstractRandomDungeonGenerator : MonoBehaviour
     {
         builder.Clear();
         builder.ColorTilemap(Color.white);
+        interactibleObjectGenorator.Clear();
     }
 
     protected abstract void RunGenoration();

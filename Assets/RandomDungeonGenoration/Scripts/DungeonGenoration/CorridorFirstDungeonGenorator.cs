@@ -19,7 +19,7 @@ public class CorridorFirstDungeonGenorator : RandomDungeonGenerator
 
     [SerializeField]
     [Range(0f, 1f)]
-    private float roomPercent = 0.8f;
+    private float roomToCorridorPercent = 0.8f;
 
     protected override void RunGenoration()
     {
@@ -28,18 +28,20 @@ public class CorridorFirstDungeonGenorator : RandomDungeonGenerator
 
     private void StartDungeonGenoration()
     {
-        HashSet<Vector2Int> floorPos = new HashSet<Vector2Int>();
+        HashSet<Vector2Int> dungeonTiles = new HashSet<Vector2Int>();
         HashSet<Vector2Int> potentialRoomPos = new HashSet<Vector2Int>();
 
-        CreateCorridors(floorPos, potentialRoomPos);
+        CreateCorridors(dungeonTiles, potentialRoomPos);
 
-        floorPos.UnionWith(CreateRooms(FindAllDeadEnds(floorPos)));
+        dungeonTiles.UnionWith(CreateRooms(FindAllDeadEnds(dungeonTiles)));
 
-        floorPos.UnionWith(CreateRooms(potentialRoomPos));
+        dungeonTiles.UnionWith(CreateRooms(potentialRoomPos));
 
-        floorPos.UnionWith(RandomDungeonGenerationAlgorithm.GenorateWalls(floorPos));
+        interactibleObjectGenorator.GenorateDungeonObjects(dungeonTiles);
 
-        builder.PaintFloorTiles(floorPos);
+        dungeonTiles.UnionWith(RandomDungeonGenerationAlgorithm.GenorateWalls(dungeonTiles));
+
+        builder.PaintFloorTiles(dungeonTiles);
 
         if (genorateWithRandomColor)
         {
@@ -77,7 +79,7 @@ public class CorridorFirstDungeonGenorator : RandomDungeonGenerator
     {
         HashSet<Vector2Int> rooms = new HashSet<Vector2Int>();
 
-        int roomCreateCount = Mathf.RoundToInt(potentialRoomPos.Count * roomPercent);
+        int roomCreateCount = Mathf.RoundToInt(potentialRoomPos.Count * roomToCorridorPercent);
 
         List<Vector2Int> createRooms = potentialRoomPos.OrderBy(x => Guid.NewGuid()).Take(roomCreateCount).ToList();
 
