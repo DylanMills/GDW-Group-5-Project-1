@@ -10,4 +10,8 @@ public class InteractableObject : ScriptableObject
 
     [Range(0f, 0.1f)]
     public float objectToRoomPercent = 0f;
+
+    public bool genorateSetAmount = false;
+
+    public int genorateAmount = 1;
 }

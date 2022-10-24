@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Torch
   m_EditorClassIdentifier: 
   prefab: {fileID: 5749746106018223246, guid: 862316543fe74904a84dc2ccce9ae13f, type: 3}
-  objectToRoomPercent: 0.01
+  objectToRoomPercent: 0.02
+  genorateSetAmount: 0
+  genorateAmount: 1

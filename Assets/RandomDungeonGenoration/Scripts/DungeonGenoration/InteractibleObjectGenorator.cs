@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class InteractibleObjectGenorator : MonoBehaviour
 {
@@ -18,41 +19,54 @@ public class InteractibleObjectGenorator : MonoBehaviour
 
         foreach (InteractableObject obj in interactableObjects)
         {
-            HashSet<Vector2Int> createdObjectPos = new HashSet<Vector2Int>();
-
-            int createObjectCount = Mathf.RoundToInt(dungeonFloor.Count * obj.objectToRoomPercent);
-            List<Vector2Int> createObjects = dungeonFloor.OrderBy(x => Guid.NewGuid()).Take(createObjectCount).ToList();
-
-            foreach  (Vector2Int pos in createObjects)
+            if (!obj.genorateSetAmount)
             {
-                bool spaceOcupied = false;
+                HashSet<Vector2Int> createdObjectPos = new HashSet<Vector2Int>();
 
-                //Check if object neigbors a preexisting instance of object
-                foreach(Vector2Int dir in Direction2D.dirList)
+                int createObjectCount = Mathf.RoundToInt(dungeonFloor.Count * obj.objectToRoomPercent);
+                List<Vector2Int> createObjects = dungeonFloor.OrderBy(x => Guid.NewGuid()).Take(createObjectCount).ToList();
+
+                foreach (Vector2Int pos in createObjects)
                 {
-                    if (createdObjectPos.Contains(pos + dir))
-                        spaceOcupied = true;
+                    bool spaceOcupied = false;
 
-                    if (dir == Vector2Int.up || dir == Vector2Int.down)
+                    //Check if object neigbors a preexisting instance of object
+                    foreach (Vector2Int dir in Direction2D.dirList)
                     {
-                        if (createdObjectPos.Contains(pos + dir + Vector2Int.right))
+                        if (createdObjectPos.Contains(pos + dir))
                             spaceOcupied = true;
-                        if (createdObjectPos.Contains(pos + dir + Vector2Int.left))
-                            spaceOcupied = true;
+
+                        if (dir == Vector2Int.up || dir == Vector2Int.down)
+                        {
+                            if (createdObjectPos.Contains(pos + dir + Vector2Int.right))
+                                spaceOcupied = true;
+                            if (createdObjectPos.Contains(pos + dir + Vector2Int.left))
+                                spaceOcupied = true;
+                        }
+                        else
+                        {
+                            if (createdObjectPos.Contains(pos + dir + Vector2Int.up))
+                                spaceOcupied = true;
+                            if (createdObjectPos.Contains(pos + dir + Vector2Int.down))
+                                spaceOcupied = true;
+                        }
                     }
-                    else
+
+                    if (!spaceOcupied)
                     {
-                        if (createdObjectPos.Contains(pos + dir + Vector2Int.up))
-                            spaceOcupied = true;
-                        if (createdObjectPos.Contains(pos + dir + Vector2Int.down))
-                            spaceOcupied = true;
+                        Instantiate(obj.prefab, new Vector3(pos.x + 0.5f, pos.y + 0.5f, 0), Quaternion.identity, interactableObjectPartent);
+                        createdObjectPos.Add(pos);
                     }
                 }
+            }
+            else
+            {
+                int createObjectCount = Mathf.RoundToInt(dungeonFloor.Count * obj.objectToRoomPercent);
+                List<Vector2Int> createObjects = dungeonFloor.OrderBy(x => Guid.NewGuid()).Take(obj.genorateAmount).ToList();
 
-                if (!spaceOcupied)
+                foreach (Vector2Int pos in createObjects)
                 {
                     Instantiate(obj.prefab, new Vector3(pos.x + 0.5f, pos.y + 0.5f, 0), Quaternion.identity, interactableObjectPartent);
-                    createdObjectPos.Add(pos);
                 }
             }
         }
