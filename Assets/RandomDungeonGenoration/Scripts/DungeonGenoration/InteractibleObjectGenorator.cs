@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 using static UnityEditor.PlayerSettings;
 
@@ -38,16 +39,14 @@ public class InteractibleObjectGenorator : MonoBehaviour
 
                         if (dir == Vector2Int.up || dir == Vector2Int.down)
                         {
-                            if (createdObjectPos.Contains(pos + dir + Vector2Int.right))
-                                spaceOcupied = true;
-                            if (createdObjectPos.Contains(pos + dir + Vector2Int.left))
+                            if (createdObjectPos.Contains(pos + dir + Vector2Int.right) || 
+                                createdObjectPos.Contains(pos + dir + Vector2Int.left)) 
                                 spaceOcupied = true;
                         }
                         else
                         {
-                            if (createdObjectPos.Contains(pos + dir + Vector2Int.up))
-                                spaceOcupied = true;
-                            if (createdObjectPos.Contains(pos + dir + Vector2Int.down))
+                            if (createdObjectPos.Contains(pos + dir + Vector2Int.up) ||
+                                createdObjectPos.Contains(pos + dir + Vector2Int.down)) 
                                 spaceOcupied = true;
                         }
                     }

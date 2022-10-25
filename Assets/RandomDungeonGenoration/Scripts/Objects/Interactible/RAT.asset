@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2d1941470deb6499f2440169828f22, type: 3}
+  m_Name: RAT
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1532146503378046645, guid: af25770f3aef7664c8350817ae8786f5, type: 3}
+  objectToRoomPercent: 0.1
+  genorateSetAmount: 0
+  genorateAmount: 1
