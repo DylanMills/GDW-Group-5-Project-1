@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
             isMoving = false;
         }
         
-        if (move == new Vector2(0.0f, 1.0f) || move == new Vector2(1.0f, 1.0f) || move == new Vector2(-1.0f, 1.0f))
+        if (move == new Vector2(0.0f, 1.0f))
         {
             movingUp = true;
         }
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
             movingUp = false;
         }
         
-        if (move == new Vector2(0.0f, -1.0f) || move == new Vector2(-1.0f, -1.0f) || move == new Vector2(1.0f, -1.0f))
+        if (move == new Vector2(0.0f, -1.0f))
         {
             movingDown = true;
         }
