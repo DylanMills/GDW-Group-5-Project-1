@@ -198,5 +198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2

@@ -532,6 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &104595976
@@ -732,6 +733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &136682480
@@ -1072,6 +1074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &343788643
@@ -1318,6 +1321,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1447,6 +1451,102 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!82 &519420035
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6d897bbfd6175c041bf7a1fbda19ab9c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &540287781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,6 +1594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &540287784
@@ -1886,6 +1987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &671942785
@@ -2086,6 +2188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &691152828
@@ -2286,6 +2389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &806397541
@@ -2562,6 +2666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &866817817
@@ -2762,6 +2867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &979523483
@@ -2962,6 +3068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &984485892
@@ -3264,6 +3371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &1007391473
@@ -3464,6 +3572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &1028717943
@@ -3664,6 +3773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &1111598527
@@ -24930,6 +25040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &1287960474
@@ -25130,6 +25241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &1341666483
@@ -25330,6 +25442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &1405051087
@@ -25530,6 +25643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &1406599026
@@ -25730,6 +25844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &1407727480
@@ -26219,6 +26334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &1962106460
@@ -26419,6 +26535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c253ee2dc89a49a20257c33023ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flameSound: {fileID: 8300000, guid: 4c12897761ad35447afc2137ba82cfb8, type: 3}
   activateTorchWithPlayer: 1
   torchActivateInRange: 2
 --- !u!95 &2048965062

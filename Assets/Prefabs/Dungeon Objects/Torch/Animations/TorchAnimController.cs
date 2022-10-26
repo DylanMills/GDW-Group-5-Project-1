@@ -6,9 +6,9 @@ public class TorchAnimController : MonoBehaviour
 {
     private Animator anim;
     private SpriteRenderer spriteRenderer;
-
+    public AudioClip flameSound;
     private Transform player;
-
+    private bool soundPlayed = false;
     [SerializeField]
     private bool activateTorchWithPlayer;
 
@@ -27,6 +27,11 @@ public class TorchAnimController : MonoBehaviour
         if ((player.position - transform.position).magnitude <= torchActivateInRange && activateTorchWithPlayer)
         {
             anim.SetBool("TorchActive", true);
+            if (!soundPlayed)
+            {
+                AudioSource.PlayClipAtPoint(flameSound, transform.position, 0.1f);
+                soundPlayed = true;
+            }
         }
 
         spriteRenderer.sortingOrder = player.position.y - transform.position.y > 0 ? 2 : 0;
