@@ -26,7 +26,7 @@ public class CorridorFirstDungeonGenorator : RandomDungeonGenerator
         StartDungeonGenoration();
     }
 
-    private void StartDungeonGenoration()
+    public void StartDungeonGenoration()
     {
         HashSet<Vector2Int> dungeonTiles = new HashSet<Vector2Int>();
         HashSet<Vector2Int> potentialRoomPos = new HashSet<Vector2Int>();
