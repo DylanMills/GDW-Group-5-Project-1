@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b2d1941470deb6499f2440169828f22, type: 3}
   m_Name: Hatch
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 4601655171325051286, guid: 93a2379a321d3a34887877528b0199b4, type: 3}
   objectToRoomPercent: 0
-  genorateSetAmount: 0
+  genorateSetAmount: 1
   genorateAmount: 1
